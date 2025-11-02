@@ -7,21 +7,19 @@ module.exports = {
   theme: {
     extend: {
       fontFamily: {
-        sans: ['Outfit', 'sans-serif'],
+        sans: ['"National Geographic"', 'Outfit', 'system-ui', 'sans-serif'],
       },
       colors: {
-        // NG-inspired: тёмный, жёлтый акцент, синий
-        ngDark: {
-          900: '#111827',  // Тёмно-серый фон
-          800: '#1F2937',
+        ng: {
+          black: '#000000',
+          dark: '#111111',
+          yellow: '#FDB813',
+          gray: '#F5F5F5',
+          light: '#FFFFFF',
         },
-        ngYellow: {
-          400: '#FDB927',  // Жёлтый акцент
-          500: '#F59E0B',
-        },
-        ngBlue: {
-          500: '#0077B6',  // Синий для ссылок
-        },
+      },
+      backgroundImage: {
+        'gradient-hero': 'linear-gradient(to bottom, rgba(0,0,0,0.8), rgba(0,0,0,0.3))',
       },
     },
   },

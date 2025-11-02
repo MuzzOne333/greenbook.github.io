@@ -5,62 +5,52 @@ import { animals } from '../data/animals'
 import AnimalCard from './AnimalCard'
 import Modal from './Modal'
 
-const categories = ['All', 'Mammals', 'Birds', 'Reptiles']
+const categories = ['All', 'Mammals', 'Birds', 'Reptiles', 'Marine']
 
 export default function Gallery() {
-  const [selected, setSelected] = useState<typeof animals[0] | null>(null)
   const [filter, setFilter] = useState('All')
+  const [selected, setSelected] = useState<typeof animals[0] | null>(null)
 
-  const filtered = filter === 'All' 
-    ? animals 
-    : animals.filter(a => a.category === filter)
-
-  const breakpointColumns = {
-    default: 4,
-    1100: 3,
-    700: 2,
-    500: 1
-  }
+  const filtered = filter === 'All' ? animals : animals.filter(a => a.category === filter)
 
   return (
-    <section className="py-12 px-4 bg-ngDark-900 text-white">
+    <section className="py-16 px-4 bg-ng-black text-ng-light">
       <div className="max-w-7xl mx-auto">
-        <div className="text-center mb-6">
-          <h2 className="text-4xl font-bold">Wildlife Stories</h2>
-          <p className="text-gray-300 mt-2">Click on any animal to explore</p>
-        </div>
+        <motion.div
+          initial={{ opacity: 0, y: 50 }}
+          whileInView={{ opacity: 1, y: 0 }}
+          viewport={{ once: true }}
+          className="text-center mb-12"
+        >
+          <h2 className="text-4xl md:text-5xl font-bold">Featured Stories</h2>
+          <p className="text-ng-gray mt-4 text-lg">Handpicked wildlife journeys</p>
+        </motion.div>
 
-        {/* Фильтры NG-style */}
-        <div className="flex justify-center gap-3 mb-10 flex-wrap">
+        <div className="flex justify-center gap-4 mb-12 flex-wrap">
           {categories.map(cat => (
-            <motion.button
+            <button
               key={cat}
-              whileHover={{ scale: 1.05 }}
               onClick={() => setFilter(cat)}
-              className={`px-6 py-2 rounded-full font-medium transition-all ${
+              className={`px-6 py-2 font-semibold transition-all ${
                 filter === cat
-                  ? 'bg-ngYellow-400 text-black shadow-lg'
-                  : 'bg-ngDark-800 text-gray-300 hover:bg-ngDark-700'
+                  ? 'bg-ng-yellow text-black'
+                  : 'text-ng-gray hover:text-ng-light border border-ng-gray/30'
               }`}
             >
               {cat}
-            </motion.button>
+            </button>
           ))}
         </div>
 
-        {/* Masonry */}
-        <Masonry
-          breakpointCols={breakpointColumns}
-          className="flex -ml-6 w-auto"
-          columnClassName="pl-6"
-        >
+        <Masonry breakpointCols={{ default: 3, 1100: 3, 700: 2, 500: 1 }} className="flex -ml-4">
           {filtered.map((animal, i) => (
             <motion.div
               key={animal.id}
-              initial={{ opacity: 0, y: 50 }}
-              animate={{ opacity: 1, y: 0 }}
-              transition={{ duration: 0.5, delay: i * 0.1 }}
-              className="mb-6"
+              initial={{ opacity: 0, scale: 0.9 }}
+              whileInView={{ opacity: 1, scale: 1 }}
+              viewport={{ once: true }}
+              transition={{ delay: i * 0.1 }}
+              className="pl-4 mb-8"
             >
               <AnimalCard animal={animal} onClick={() => setSelected(animal)} />
             </motion.div>
