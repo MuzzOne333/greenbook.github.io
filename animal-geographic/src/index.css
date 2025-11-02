@@ -1,16 +1,20 @@
 @import url('https://fonts.googleapis.com/css2?family=Outfit:wght@100..900&display=swap');
 
+/* Swiper стили */
+@import 'swiper/css';
+@import 'swiper/css/navigation';
+@import 'swiper/css/pagination';
+
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
 
-/* Masonry фикс */
-.my-masonry-grid {
-  display: flex;
-  margin-left: -24px;
-  width: auto;
+/* NG-style: тёмный overlay для hero */
+.hero-overlay {
+  background: linear-gradient(to bottom, rgba(0,0,0,0.7), transparent);
 }
-.my-masonry-grid_column {
-  padding-left: 24px;
-  background-clip: padding-box;
+
+/* Кнопки NG-style */
+.ng-btn {
+  @apply bg-ngYellow-400 text-black px-6 py-3 rounded-md font-semibold hover:bg-ngYellow-500 transition-all shadow-lg;
 }

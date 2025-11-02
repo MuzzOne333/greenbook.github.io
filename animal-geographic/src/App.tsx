@@ -5,7 +5,7 @@ import Footer from './components/Footer'
 
 export default function App() {
   return (
-    <div className="min-h-screen bg-gray-50">
+    <div className="min-h-screen bg-ngDark-900">
       <Header />
       <Hero />
       <Gallery />

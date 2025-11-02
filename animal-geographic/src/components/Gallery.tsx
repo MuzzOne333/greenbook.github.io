@@ -23,35 +23,36 @@ export default function Gallery() {
   }
 
   return (
-    <section className="py-12 px-4">
+    <section className="py-12 px-4 bg-ngDark-900 text-white">
       <div className="max-w-7xl mx-auto">
         <div className="text-center mb-6">
-          <h2 className="text-3xl font-bold text-gray-800">Wildlife Stories</h2>
-          <p className="text-gray-600 mt-2">Click on any animal to explore</p>
+          <h2 className="text-4xl font-bold">Wildlife Stories</h2>
+          <p className="text-gray-300 mt-2">Click on any animal to explore</p>
         </div>
 
-        {/* Фильтры */}
+        {/* Фильтры NG-style */}
         <div className="flex justify-center gap-3 mb-10 flex-wrap">
           {categories.map(cat => (
-            <button
+            <motion.button
               key={cat}
+              whileHover={{ scale: 1.05 }}
               onClick={() => setFilter(cat)}
               className={`px-6 py-2 rounded-full font-medium transition-all ${
                 filter === cat
-                  ? 'bg-amber-600 text-white shadow-lg'
-                  : 'bg-white text-gray-700 hover:bg-amber-50 shadow'
+                  ? 'bg-ngYellow-400 text-black shadow-lg'
+                  : 'bg-ngDark-800 text-gray-300 hover:bg-ngDark-700'
               }`}
             >
               {cat}
-            </button>
+            </motion.button>
           ))}
         </div>
 
-        {/* Masonry галерея с анимацией */}
+        {/* Masonry */}
         <Masonry
           breakpointCols={breakpointColumns}
           className="flex -ml-6 w-auto"
-          columnClassName="pl-6 bg-clip-padding"
+          columnClassName="pl-6"
         >
           {filtered.map((animal, i) => (
             <motion.div
