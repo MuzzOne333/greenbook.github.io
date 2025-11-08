@@ -4,3 +4,27 @@ body {
     font-weight: 400;
     font-style: normal;
 }
+
+#navbar {
+    font-optical-sizing: auto;
+    font-weight: 600;
+    font-style: normal;
+}
+
+#navbar .navbar-brand {
+    font-optical-sizing: auto;
+    font-weight: 500;
+    font-style: normal;
+}
+
+/* .nav-item.dropdown .dropdown-menu {
+    font-optical-sizing: auto;
+    font-weight: 600;
+    font-style: normal;
+} */
+
+#header {
+    font-optical-sizing: auto;
+    font-weight: 700;
+    font-style: normal;
+}
