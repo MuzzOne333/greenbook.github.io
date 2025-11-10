@@ -10,23 +10,28 @@
     <link rel="stylesheet" href="css/styles.css">
 </head>
 <body>
+    <div class="preloader" id="preloader">
+        <div class="spinner"></div>
+        <h1 class="mt-3">Green Book</h1>
+    </div>
+
     <nav class="navbar navbar-expand-lg fixed-top">
         <div class="container">
             <a class="navbar-brand fw-bold fs-4" href="#">Green Book</a>
-                <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#nav">
-                    <span class="navbar-toggler-icon"></span>
-                </button>
-                <div class="collapse navbar-collapse" id="nav">
-                    <ul class="navbar-nav ms-auto align-items-center">
-                        <li class="nav-item"><a class="nav-link active" href="#home">Home</a></li>
-                        <li class="nav-item"><a class="nav-link" href="#causes">Causes</a></li>
-                        <li class="nav-item"><a class="nav-link" href="#stories">Stories</a></li>
-                        <li class="nav-item"><a class="nav-link" href="#appeals">Appeals</a></li>
-                        <li class="nav-item"><a class="nav-link" href="#adopt">Adopt</a></li>
-                        <li class="nav-item"><a class="nav-link" href="#help">Help</a></li>
-                        <li class="nav-item"><button class="theme-toggle ms-3" id="themeToggle"><i class="bi bi-moon-stars-fill"></i></button></li>
-                    </ul>
-                </div>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#nav">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="nav">
+                <ul class="navbar-nav ms-auto align-items-center">
+                    <li class="nav-item"><a class="nav-link active" href="#home">Home</a></li>
+                    <li class="nav-item"><a class="nav-link" href="#causes">Causes</a></li>
+                    <li class="nav-item"><a class="nav-link" href="#stories">Stories</a></li>
+                    <li class="nav-item"><a class="nav-link" href="#appeals">Appeals</a></li>
+                    <li class="nav-item"><a class="nav-link" href="#adopt">Adopt</a></li>
+                    <li class="nav-item"><a class="nav-link" href="#help">Help</a></li>
+                    <li class="nav-item"><button class="theme-toggle ms-3" id="themeToggle"><i class="bi bi-moon-stars-fill"></i></button></li>
+                </ul>
+            </div>
         </div>
     </nav>
 
@@ -54,35 +59,35 @@
         <div class="container">
             <div class="text-center mb-5 fade-in">
                 <h2 class="section-title">Our Mission</h2>
-                <p class="text-muted mt-4">Protecting life through action, not words.</p>
+                <p class="text mt-4">Protecting life through action, not words.</p>
             </div>
             <div class="row g-4">
                 <div class="col-md-3 fade-in">
                     <div class="cause-card p-4 text-center h-100">
                         <div class="cause-icon"><i class="bi bi-tree-fill"></i></div>
                         <h5>Habitats & Climate</h5>
-                        <p class="small text-muted">Restoring ecosystems for survival.</p>
+                        <p class="small text">Restoring ecosystems for survival.</p>
                     </div>
                 </div>
                 <div class="col-md-3 fade-in">
                     <div class="cause-card p-4 text-center h-100">
                         <div class="cause-icon"><i class="bi bi-people-fill"></i></div>
                         <h5>Communities</h5>
-                        <p class="small text-muted">Empowering locals to protect wildlife.</p>
+                        <p class="small text">Empowering locals to protect wildlife.</p>
                     </div>
                 </div>
                 <div class="col-md-3 fade-in">
                     <div class="cause-card p-4 text-center h-100">
                         <div class="cause-icon"><i class="bi bi-heart-pulse-fill"></i></div>
                         <h5>Rescue & Rehab</h5>
-                        <p class="small text-muted">Expert care for animals in crisis.</p>
+                        <p class="small text">Expert care for animals in crisis.</p>
                     </div>
                 </div>
                 <div class="col-md-3 fade-in">
                     <div class="cause-card p-4 text-center h-100">
                         <div class="cause-icon"><i class="bi bi-shield-fill"></i></div>
                         <h5>Guardians</h5>
-                        <p class="small text-muted">Join the movement to defend forests.</p>
+                        <p class="small text">Join the movement to defend forests.</p>
                     </div>
                 </div>
             </div>
@@ -93,7 +98,7 @@
         <div class="container">
             <div class="text-center mb-5 fade-in">
                 <h2 class="section-title">Rescue Stories</h2>
-                <p class="text-muted">Hope in action.</p>
+                <p class="text">Hope in action.</p>
             </div>
             <div class="row g-4" id="storiesContainer"></div>
         </div>
@@ -103,7 +108,7 @@
         <div class="container">
             <div class="text-center mb-5 fade-in">
                 <h2 class="section-title">Urgent Appeals</h2>
-                <p class="text-muted">These animals need you now.</p>
+                <p class="text">These animals need you now.</p>
             </div>
             <div class="row g-4">
                 <div class="col-md-4 fade-in">
@@ -112,7 +117,7 @@
                         <h5>The Great Bear Rescue</h5>
                         <p class="small">Bears in Armenia suffer in tiny cages. Help us free them.</p>
                         <div class="progress mb-3"><div class="progress-bar" style="width:72%"></div></div>
-                        <button class="btn btn-cta w-100">Donate Now</button>
+                        <button class="btn btn-cta btn-glow w-100">Donate Now</button>
                     </div>
                 </div>
                 <div class="col-md-4 fade-in">
@@ -121,7 +126,7 @@
                         <h5>Guardians of the Forest</h5>
                         <p class="small">Empower communities to save orangutans.</p>
                         <div class="progress mb-3"><div class="progress-bar" style="width:48%"></div></div>
-                        <button class="btn btn-cta w-100">Join Now</button>
+                        <button class="btn btn-cta btn-glow w-100">Join Now</button>
                     </div>
                 </div>
                 <div class="col-md-4 fade-in">
@@ -130,7 +135,7 @@
                         <h5>Friends of Green Book</h5>
                         <p class="small">Monthly gifts fund rescues worldwide.</p>
                         <div class="progress mb-3"><div class="progress-bar" style="width:89%"></div></div>
-                        <button class="btn btn-cta w-100">Become a Friend</button>
+                        <button class="btn btn-cta btn-glow w-100">Become a Friend</button>
                     </div>
                 </div>
             </div>
@@ -146,21 +151,21 @@
             <div class="row g-4 justify-content-center">
                 <div class="col-md-3 fade-in">
                     <div class="adopt-card p-4">
-                        <img src="https://images.unsplash.com/photo-1543946207-39bd91f8d5f9?ixlib=rb-4.0.3&auto=format&fit=crop&w=300&q=80" class="rounded-circle mb-3" width="120" alt="Orangutan">
+                        <img src="" class="rounded-circle mb-3" width="120" alt="Orangutan">
                         <h6>Adopt an Orangutan</h6>
                         <button class="btn btn-outline-light btn-sm" data-bs-toggle="modal" data-bs-target="#adoptModal" onclick="setAnimal('Orangutan')">Adopt</button>
                     </div>
                 </div>
                 <div class="col-md-3 fade-in">
                     <div class="adopt-card p-4">
-                        <img src="https://images.unsplash.com/photo-1564349683136-77e08b575c9f?ixlib=rb-4.0.3&auto=format&fit=crop&w=300&q=80" class="rounded-circle mb-3" width="120" alt="Bear">
+                        <img src="" class="rounded-circle mb-3" width="120" alt="Bear">
                         <h6>Adopt a Bear</h6>
                         <button class="btn btn-outline-light btn-sm" data-bs-toggle="modal" data-bs-target="#adoptModal" onclick="setAnimal('Bear')">Adopt</button>
                     </div>
                 </div>
                 <div class="col-md-3 fade-in">
                     <div class="adopt-card p-4">
-                        <img src="https://images.unsplash.com/photo-1570481662002-501e50b2a1b6?ixlib=rb-4.0.3&auto=format&fit=crop&w=300&q=80" class="rounded-circle mb-3" width="120" alt="Loris">
+                        <img src="" class="rounded-circle mb-3" width="120" alt="Loris">
                         <h6>Adopt a Slow Loris</h6>
                         <button class="btn btn-outline-light btn-sm" data-bs-toggle="modal" data-bs-target="#adoptModal" onclick="setAnimal('Slow Loris')">Adopt</button>
                     </div>
