@@ -1,4 +1,35 @@
 document.addEventListener("DOMContentLoaded", () => {
+    //Тут я добавил смену кнопок с Sign In и Sign Up на Имя пользователя и кнопку Log Out
+    if (typeof getSession !== 'undefined' && typeof clearSession !== 'undefined') {
+        const currentUser = getSession();
+        const navList = document.getElementById('nav').querySelector('.navbar-nav');
+
+        if (currentUser) {
+            const navItems = navList.querySelectorAll('.nav-item');
+            navItems.forEach(item => {
+                const signInLink = item.querySelector('a[href="SignIn.html"]');
+                const signUpLink = item.querySelector('a[href="SignUp.html"]');
+                if (signInLink || signUpLink) {
+                    item.style.display = 'none';
+                }
+            });
+            const nameItem = document.createElement('li');
+            nameItem.className = 'nav-item d-flex align-items-center me-3';
+            // У пользователя свой собственный класс для css файла и тут я добавил иконку пользователя
+            nameItem.innerHTML = `<span class="navbar-text fw-bold me-2 text-light user-name"><i class="bi bi-person-circle me-1"></i>${currentUser.name}</span>`;
+            const logoutItem = document.createElement('li');
+            logoutItem.className = 'nav-item';
+            logoutItem.innerHTML = `<button class="btn btn-outline-danger ms-2" id="logoutBtn">Log Out</button>`;
+            const themeToggleItem = document.getElementById('themeToggle').parentElement;
+            navList.insertBefore(nameItem, themeToggleItem);
+            navList.insertBefore(logoutItem, themeToggleItem);
+            document.getElementById('logoutBtn').addEventListener('click', () => {
+                clearSession();
+                window.location.reload();
+            });
+        }
+    }
+    //Тут уже снизу предыдущий код:
     const preloader = document.getElementById("preloader");
     window.addEventListener("load", () => {
         preloader.style.opacity = "0";
