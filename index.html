@@ -112,9 +112,42 @@
                 <h2 class="section-title">Rescue Stories</h2>
                 <p class="text">Hope in action.</p>
             </div>
-            <div class="row g-4" id="storiesContainer"></div>
+
+            <div class="row align-items-center justify-content-center">
+
+                <div class="col-md-7 d-flex justify-content-center">
+                    <div class="carousel position-relative" id="storiesContainer">
+                        <div class="carousel-wrapper">
+                            <div class="carousel-slide active">
+                                <img src="assets/faith-4.jpg" alt="Story 1">
+                            </div>
+                            <div class="carousel-slide">
+                                <img src="assets/vaquita.png" alt="Story 2">
+                            </div>
+                            <div class="carousel-slide">
+                                <img src="assets/orangutan.png" alt="Story 3">
+                            </div>
+                        </div>
+                        <button class="carousel-btn prev" id="prev">&#8678;</button>
+                        <button class="carousel-btn next" id="next">&#8680;</button>
+                    </div>
+                </div>
+
+                <div class="col-md-5 fade-in">
+                    <div class="story-description p-4 rounded">
+                        <h4 id="storyTitle">Story Title 1</h4>
+                        <p id="storyText">
+                            Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aliquam vitae ex nec leo luctus
+                            sodales.
+                        </p>
+                        <a id="learnMoreBtn" href="#" class="learn-more-btn mt-3 d-inline-block">Learn More</a>
+                    </div>
+                </div>
+            </div>
         </div>
     </section>
+
+
     <section id="appeals">
         <div class="container">
             <div class="text-center mb-5 fade-in">

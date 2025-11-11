@@ -105,3 +105,58 @@ document.addEventListener("DOMContentLoaded", () => {
 
     document.querySelectorAll(".fade-in").forEach(el => observer.observe(el));
 });
+
+
+
+
+const prevButton = document.getElementById("prev");
+const nextButton = document.getElementById("next");
+const carouselWrapper = document.querySelector(".carousel-wrapper");
+const slides = document.querySelectorAll(".carousel-slide");
+
+const storyTitle = document.getElementById("storyTitle");
+const storyText = document.getElementById("storyText");
+const learnMoreBtn = document.getElementById("learnMoreBtn");
+
+const stories = [
+    {
+        title: "Faith the Pangolin",
+        text: "Faith was rescued from illegal traffickers and rehabilitated back into the wild. Her recovery inspired our anti-poaching campaign.",
+        link: "stories/faith-pangolin-rescue.html",
+    },
+    {
+        title: "Vaquita",
+        text: "Vaquitas are a critically endangered species of marine mammal, native to the northern part of the Gulf of California, Mexico. They are the smallest species of porpoise, reaching only about 4 to 5 feet in length and weighing around 100 to 120 pounds.",
+        link: "stories/vaquita.html",
+    },
+    {
+        title: "Sumatran Orangutan",
+        text: "Sumatran orangutans are a critically endangered species of great ape found only on the island of Sumatra in Indonesia. They are one of the three species of orangutans, along with the Bornean and the recently identified Tapanuli orangutans.",
+        link: "stories/sumatran_orangutan.html",
+    },
+];
+
+let currentIndex = 0;
+
+function showSlide(index) {
+    slides.forEach((slide) => slide.classList.remove("active"));
+    slides[index].classList.add("active");
+    carouselWrapper.style.transform = `translateX(-${index * 100}%)`;
+
+    const story = stories[index];
+    storyTitle.textContent = story.title;
+    storyText.textContent = story.text;
+    learnMoreBtn.href = story.link;
+}
+
+prevButton.addEventListener("click", () => {
+    currentIndex = currentIndex === 0 ? slides.length - 1 : currentIndex - 1;
+    showSlide(currentIndex);
+});
+
+nextButton.addEventListener("click", () => {
+    currentIndex = currentIndex === slides.length - 1 ? 0 : currentIndex + 1;
+    showSlide(currentIndex);
+});
+
+showSlide(currentIndex);
