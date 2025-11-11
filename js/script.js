@@ -84,22 +84,7 @@ document.addEventListener("DOMContentLoaded", () => {
         }
     ];
 
-    const container = document.getElementById("storiesContainer");
-    stories.forEach(s => {
-        container.innerHTML += `
-            <div class="col-md-4 fade-in">
-                <div class="story-card h-100">
-                    <div class="story-img-wrapper">
-                        <img src="${s.img}" alt="${s.title}" class="story-img">
-                    </div>
-                    <div class="p-4">
-                        <h5>${s.title}</h5>
-                        <p class="small">${s.text}</p>
-                        <button class="btn btn-outline-light btn-sm read-more" data-slug="${s.slug}">Read More</button>
-                    </div>
-                </div>
-            </div>`;
-    });
+
 
     document.querySelectorAll(".read-more").forEach(btn => {
         btn.addEventListener("click", () => {
