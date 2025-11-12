@@ -124,11 +124,6 @@ const storyTitle = document.getElementById("storyTitle");
 const storyText = document.getElementById("storyText");
 const learnMoreBtn = document.getElementById("learnMoreBtn");
 
-// ... (предыдущий код script.js)
-
-// Убедитесь, что этот массив "stories" в конце файла
-// содержит 5 элементов, соответствующих 5 слайдам в index.html.
-
 const stories = [
     {
         title: "Faith the Pangolin",
