@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html lang="en" data-theme="dark">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Faith the Pangolin | Green Book</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.css" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;500;600;700;800;900&display=swap"
+        rel="stylesheet">
+    <link rel="stylesheet" href="../css/styles.css">
+</head>
+
+<body>
+
+    <nav class="navbar navbar-expand-lg fixed-top">
+        <div class="container">
+            <a class="navbar-brand fw-bold fs-4" href="../index.html">Green Book</a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#nav">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="nav">
+                <ul class="navbar-nav ms-auto align-items-center">
+                    <li class="nav-item"><a class="nav-link" href="../index.html#home">Home</a></li>
+                    <li class="nav-item"><a class="nav-link" href="../index.html#causes">Causes</a></li>
+                    <li class="nav-item"><a class="nav-link active" href="../index.html#stories">Stories</a></li>
+                    <li class="nav-item"><a class="nav-link" href="../index.html#appeals">Appeals</a></li>
+                    <li class="nav-item"><a class="nav-link" href="../index.html#adopt">Adopt</a></li>
+                    <li class="nav-item"><a class="nav-link" href="../index.html#help">Help</a></li>
+                    <li class="nav-item"><button class="theme-toggle ms-3" id="themeToggle"><i
+                                class="bi bi-moon-stars-fill"></i></button></li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+
+    <section class="py-5 mt-5">
+        <div class="container">
+            <div class="row">
+                <div class="col-lg-8 mx-auto">
+                    <article class="bg-var(--card) p-5 rounded-4"
+                        style="backdrop-filter: blur(12px); border: 1px solid var(--card-border);">
+                        <img src="../assets/vaquita.png" class="img-fluid rounded-3 mb-4" alt="Faith the pangolin">
+                        <h1 class="display-5 fw-bold mb-3">Vaquita</h1>
+                        <p class="text-muted small mb-4">No Photo Credit for this one</p>
+                        <p class="lead">Vaquitas are a critically endangered species of marine mammal, native to the
+                            northern part of the Gulf of California, Mexico. They are the smallest species of porpoise,
+                            reaching only about 4 to 5 feet in length and weighing around 100 to 120 pounds. Despite
+                            their small size, vaquitas play an important role in the marine ecosystem, contributing to
+                            the balance of the food chain.</p>
+                        <p>The primary reason vaquitas are endangered is human activity. The most significant threat to
+                            their survival is bycatch, which refers to the accidental capture of non-target species in
+                            fishing nets. In particular, vaquitas often become trapped in gillnets, which are used to
+                            catch totoaba, a large fish that is also critically endangered. The swim bladders of totoaba
+                            are highly prized in illegal international trade, especially in China, where they are
+                            believed to have medicinal properties.</p>
+                        <p>These gillnets, which are illegal but still used by some fishermen, pose a deadly risk to
+                            vaquitas. The nets entangle the porpoises, and because they cannot surface to breathe, they
+                            eventually drown. This form of bycatch has had a devastating effect on the vaquita
+                            population, with estimates suggesting that fewer than 10 individuals remain in the wild
+                            today. Some conservationists fear that the species could go extinct within a few years if
+                            these threats are not addressed.</p>
+                        <p>Human activity in the region also contributes to the overall environmental degradation that
+                            affects vaquitas. Overfishing, habitat loss, and pollution all contribute to the declining
+                            health of the Gulf of California, the vaquita’s only known habitat. Invasive species, such
+                            as certain types of algae, further threaten the marine ecosystem that the vaquita depends on
+                            for food.</p>
+                        <blockquote class="border-start border-4 border-accent ps-4 my-4 fst-italic">
+                            Despite international efforts to protect the vaquita, including stricter enforcement of
+                            fishing bans and the creation of a “zero-tolerance zone” for illegal fishing, progress has
+                            been slow. There has been some success in reducing illegal fishing activities, but it
+                            remains an ongoing struggle. Efforts to raise awareness about the importance of protecting
+                            the vaquita have gained traction, but illegal trade and fishing continue to pose a major
+                            threat.
+                        </blockquote>
+                        <p>In summary, the vaquita’s critically endangered status is largely the result of human
+                            activities, primarily illegal fishing for totoaba, which causes bycatch.</p>
+                        <p>If the illegal fishing trade persists and conservation efforts are not scaled up, the vaquita
+                            may soon become extinct, representing yet another tragic loss of biodiversity due to human
+                            influence.</p>
+                        <p class="mt-5"><a href="../index.html#stories" class="btn btn-outline-light">Back to
+                                Stories</a></p>
+                    </article>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+    <script>
+        const toggle = document.getElementById("themeToggle");
+        const html = document.documentElement;
+        toggle.addEventListener("click", () => {
+            const isDark = html.getAttribute("data-theme") === "dark";
+            html.setAttribute("data-theme", isDark ? "light" : "dark");
+            toggle.innerHTML = isDark ? '<i class="bi bi-sun-fill"></i>' : '<i class="bi bi-moon-stars-fill"></i>';
+        });
+    </script>
+</body>
+
+</html>

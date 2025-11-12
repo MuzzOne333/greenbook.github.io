@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+<html lang="en" data-theme="dark">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Faith the Pangolin | Green Book</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.css" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;500;600;700;800;900&display=swap"
+        rel="stylesheet">
+    <link rel="stylesheet" href="../css/styles.css">
+</head>
+
+<body>
+
+    <nav class="navbar navbar-expand-lg fixed-top">
+        <div class="container">
+            <a class="navbar-brand fw-bold fs-4" href="../index.html">Green Book</a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#nav">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="nav">
+                <ul class="navbar-nav ms-auto align-items-center">
+                    <li class="nav-item"><a class="nav-link" href="../index.html#home">Home</a></li>
+                    <li class="nav-item"><a class="nav-link" href="../index.html#causes">Causes</a></li>
+                    <li class="nav-item"><a class="nav-link active" href="../index.html#stories">Stories</a></li>
+                    <li class="nav-item"><a class="nav-link" href="../index.html#appeals">Appeals</a></li>
+                    <li class="nav-item"><a class="nav-link" href="../index.html#adopt">Adopt</a></li>
+                    <li class="nav-item"><a class="nav-link" href="../index.html#help">Help</a></li>
+                    <li class="nav-item"><button class="theme-toggle ms-3" id="themeToggle"><i
+                                class="bi bi-moon-stars-fill"></i></button></li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+
+    <section class="py-5 mt-5">
+        <div class="container">
+            <div class="row">
+                <div class="col-lg-8 mx-auto">
+                    <article class="bg-var(--card) p-5 rounded-4"
+                        style="backdrop-filter: blur(12px); border: 1px solid var(--card-border);">
+                        <img src="../assets/orangutan.png" class="img-fluid rounded-3 mb-4" alt="Faith the pangolin">
+                        <h1 class="display-5 fw-bold mb-3">Faith the Pangolin</h1>
+                        <p class="text-muted small mb-4">No Photo Credit for this oneeeee</p>
+                        <p class="lead">Sumatran orangutans are a critically endangered species of great ape found only
+                            on the island of Sumatra in Indonesia. They are one of the three species of orangutans,
+                            along with the Bornean and the recently identified Tapanuli orangutans. Sumatran orangutans
+                            are the rarest of the three, with only around 14,000 individuals estimated to remain in the
+                            wild. These orangutans are known for their distinctive appearance, with reddish-brown fur,
+                            large cheek pads on males, and a generally solitary lifestyle. They are primarily
+                            frugivorous, feeding on a variety of fruits, leaves, and bark, and they play a critical role
+                            in the dispersal of seeds in the forests they inhabit, thus maintaining the health of the
+                            ecosystem.</p>
+                        <p>The main reason Sumatran orangutans are endangered is habitat loss and fragmentation, driven
+                            largely by human activity. Deforestation is the biggest threat to their survival, with vast
+                            areas of the Sumatran rainforests being cleared for agriculture, particularly palm oil
+                            plantations, paper, and timber production. Palm oil is one of the most common ingredients in
+                            processed foods, cosmetics, and other consumer goods, and the demand for it has led to
+                            large-scale deforestation across Southeast Asia, particularly in Indonesia and Malaysia.
+                            This deforestation not only destroys the orangutans' natural habitat but also leaves them
+                            isolated in small, fragmented forest patches that make it harder for them to find food,
+                            mates, and shelter.</p>
+                        <p>In addition to deforestation, illegal hunting and poaching have also contributed to the
+                            decline of Sumatran orangutans. Despite laws protecting them, orangutans are often killed
+                            for bushmeat or captured for the illegal pet trade. Infant orangutans are particularly
+                            vulnerable to this, as they are often taken alive when their mothers are killed. This poses
+                            a major threat to the species, as it further reduces their already limited population.</p>
+                        <p>After having endured unimaginable hardship at the hands of wildlife traffickers, help had
+                            finally come this pangolin’s way, now named Faith, and is now receiving expert treatment at
+                            the Johannesburg Wildlife Veterinary Hospital.</p>
+                        <blockquote class="border-start border-4 border-accent ps-4 my-4 fst-italic">
+                            Furthermore, human-wildlife conflict plays a role in their endangerment. As orangutans
+                            venture into human settlements or agricultural land in search of food, they can come into
+                            conflict with farmers and local communities. Farmers may see orangutans as pests when they
+                            raid crops, leading to retaliation killings or the destruction of their habitat to prevent
+                            further encounters.
+                        </blockquote>
+                        <p>Conservation efforts to protect Sumatran orangutans are ongoing but face significant
+                            challenges. These efforts include habitat restoration, anti-poaching patrols, and raising
+                            awareness about the importance of protecting these critically endangered apes. Various
+                            organizations, such as the Sumatran Orangutan Conservation Programme (SOCP), work closely
+                            with local communities to promote sustainable land use practices, prevent illegal hunting,
+                            and rehabilitate orangutans that have been rescued from the pet trade. However, these
+                            initiatives are often undermined by the continued expansion of palm oil plantations and
+                            other industries.</p>
+                        <p>In conclusion, Sumatran orangutans are endangered due to the combined effects of habitat
+                            loss, illegal hunting, and human-wildlife conflict. Their survival depends on comprehensive
+                            conservation efforts that address the root causes of these threats. If these issues are not
+                            resolved, the Sumatran orangutan may face extinction in the near future, and with it, the
+                            loss of a critically important species in the ecosystem.</p>
+                        <p class="mt-5"><a href="../index.html#stories" class="btn btn-outline-light">Back to
+                                Stories</a></p>
+                    </article>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+    <script>
+        const toggle = document.getElementById("themeToggle");
+        const html = document.documentElement;
+        toggle.addEventListener("click", () => {
+            const isDark = html.getAttribute("data-theme") === "dark";
+            html.setAttribute("data-theme", isDark ? "light" : "dark");
+            toggle.innerHTML = isDark ? '<i class="bi bi-sun-fill"></i>' : '<i class="bi bi-moon-stars-fill"></i>';
+        });
+    </script>
+</body>
+
+</html>

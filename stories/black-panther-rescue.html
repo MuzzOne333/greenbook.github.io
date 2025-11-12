@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en" data-theme="dark">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>The Mysterious Black Panther | Green Book</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.css" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;500;600;700;800;900&display=swap"
+        rel="stylesheet">
+    <link rel="stylesheet" href="../css/styles.css">
+</head>
+
+<body>
+
+    <nav class="navbar navbar-expand-lg fixed-top">
+        <div class="container">
+            <a class="navbar-brand fw-bold fs-4" href="../index.html">Green Book</a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#nav">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="nav">
+                <ul class="navbar-nav ms-auto align-items-center">
+                    <li class="nav-item"><a class="nav-link" href="../index.html#home">Home</a></li>
+                    <li class="nav-item"><a class="nav-link" href="../index.html#causes">Causes</a></li>
+                    <li class="nav-item"><a class="nav-link active" href="../index.html#stories">Stories</a></li>
+                    <li class="nav-item"><a class="nav-link" href="../index.html#appeals">Appeals</a></li>
+                    <li class="nav-item"><a class="nav-link" href="../index.html#adopt">Adopt</a></li>
+                    <li class="nav-item"><a class="nav-link" href="../index.html#help">Help</a></li>
+                    <li class="nav-item"><button class="theme-toggle ms-3" id="themeToggle"><i
+                                class="bi bi-moon-stars-fill"></i></button></li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+
+    <section class="py-5 mt-5">
+        <div class="container">
+            <div class="row">
+                <div class="col-lg-8 mx-auto">
+                    <article class="bg-var(--card) p-5 rounded-4"
+                        style="backdrop-filter: blur(12px); border: 1px solid var(--card-border);">
+                        <img src="../assets/black-panther.png" class="img-fluid rounded-3 mb-4" alt="The mysterious Black Panther">
+                        <h1 class="display-5 fw-bold mb-3">The Mysterious Black Panther</h1>
+                        <p class="text-muted small mb-4">Photo Credit: Local Rangers</p>
+                        <p class="lead">The Black Panther is not a separate species, but a **melanistic (dark) variant** of coloring, most commonly found in leopards in Asia and Africa, and jaguars in South America. Melanism is the result of a recessive or dominant gene that causes an excess of dark pigment. Despite their coal-black appearance, their characteristic spots (rosettes) can still be seen in sunlight.</p>
+                        <p>These magnificent predators face serious threats in the wild. The main ones are **habitat loss** and **poaching**. The destruction of tropical forests for agriculture, logging, and road construction fragments their range, making it difficult for them to find food and mates. Panthers, as apex predators, require vast territories for hunting.</p>
+                        <p>Poaching remains a deadly threat. Panthers are hunted for their beautiful coats, as well as for body parts used in traditional medicine. Furthermore, panthers often become victims of snares intended for other animals. Protecting these elusive cats requires constant patrolling and cooperation with local communities.</p>
+                        <p>Recently, our rescue team conducted a successful operation to free a young black panther caught in a poacher's snare in the rainforest. The animal, weakened and frightened, was taken to our veterinary hospital, where it received first aid and began a rehabilitation program. Our goal is to restore its strength and release it back into a protected sanctuary.</p>
+                        <blockquote class="border-start border-4 border-accent ps-4 my-4 fst-italic">
+                            The conservation of the Black Panther is inextricably linked to the protection of its habitat—the health of the jungles that are home to thousands of other species.
+                        </blockquote>
+                        <p>Our conservation efforts include funding anti-poaching patrols, setting up camera traps to monitor populations, and educational programs for local residents about the importance of coexisting with these animals. Your donation helps us cover veterinary care, purchase patrolling equipment, and support forest restoration.</p>
+                        <p>In conclusion, rescuing this panther is just one example of our daily struggle. Continued support is vital to ensure these mysterious cats continue to roam the night forests.</p>
+                        <p class="mt-5"><a href="../index.html#stories" class="btn btn-outline-light">Back to Stories</a></p>
+                    </article>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+    <script>
+        const toggle = document.getElementById("themeToggle");
+        const html = document.documentElement;
+        toggle.addEventListener("click", () => {
+            const isDark = html.getAttribute("data-theme") === "dark";
+            html.setAttribute("data-theme", isDark ? "light" : "dark");
+            toggle.innerHTML = isDark ? '<i class="bi bi-sun-fill"></i>' : '<i class="bi bi-moon-stars-fill"></i>';
+        });
+    </script>
+</body>
+
+</html>
