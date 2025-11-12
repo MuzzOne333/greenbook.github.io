@@ -379,6 +379,7 @@ footer {
     position: relative;
     overflow: hidden;
     width: 800px;
+    border-radius: 15px;
 }
 
 .carousel-wrapper {
@@ -401,6 +402,7 @@ footer {
     object-fit: cover;
 }
 
+
 .carousel-btn {
     position: absolute;
     top: 50%;
@@ -412,6 +414,13 @@ footer {
     padding: 10px;
     cursor: pointer;
     z-index: 10;
+    transition: 0.5s ease;
+    border-radius: 8px;
+}
+
+.carousel-btn:hover {
+    background-color: rgba(0, 0, 0, 0.7);
+    transition: 0.5s ease;
 }
 
 .carousel-btn.prev {
@@ -465,6 +474,7 @@ footer {
         text-align: center;
     }
 }
+
 .learn-more-btn {
     display: inline-block;
     padding: 0.8rem 1.8rem;
